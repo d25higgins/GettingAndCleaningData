@@ -1,0 +1,116 @@
+Study Design
+
+This study is a summerization of parts of the data set developed in the Human Activity Recognition Using Smartphones Dataset. Information about the origianl study and the authors is given below. In this study, Mean and Standard Deviation variables from the original study are isolated and the mean is taken.  The results are in a file called the tidyDataSet.txt.
+
+The study was conducted using R with a purpos build script called run_analysis.R.
+
+Information from the original study.
+==================================================================
+Human Activity Recognition Using Smartphones Dataset
+Version 1.0
+==================================================================
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Smartlab - Non Linear Complex Systems Laboratory
+DITEN - Università degli Studi di Genova.
+Via Opera Pia 11A, I-16145, Genoa, Italy.
+activityrecognition@smartlab.ws
+www.smartlab.ws
+==================================================================
+
+
+
+Code Book
+
+All variables except activities and subjects have had their original datapoints normallized by the study authors and therefore the units are no longer significant.
+
+All variables except activities and subjects now represent the MEAN of the variable data grouped by the activities and subjects variables. That is to say the values are the Mean of the mean, or the mean of the standard deviaition.
+
+VARIABLES
+=========
+"activities"		string field which represnts the name of the activity performed. One of WALKING, WALKING_UPSTAIRS, 							WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
+"subjects"		integer field which represents the index of the subject who performed the activities above.
+"tBodyAccmeanX"		Mean of the time for Body Acceleration in X direction
+"tBodyAccmeanY"		Mean of the time for Body Acceleration in Y direction
+"tBodyAccmeanZ"		Mean of the time for Body Acceleration in Z direction
+"tBodyAccstdX"		Standard Deviation of the time for Body Acceleration in X direction
+"tBodyAccstdY"		Standard Deviation of the time for Body Acceleration in Y direction
+"tBodyAccstdZ"		Standard Deviation of the time for Body Acceleration in Z direction
+"tGravityAccmeanX"	Mean of the time for Gravity Acceleration in X direction
+"tGravityAccmeanY"	Mean of the time for Gravity Acceleration in Y direction
+"tGravityAccmeanZ"	Mean of the time for Gravity Acceleration in Z direction
+"tGravityAccstdX"	Standard Deviation of the time for Gravity Acceleration in X direction
+"tGravityAccstdY"	Standard Deviation of the time for Gravity Acceleration in Y direction
+"tGravityAccstdZ"	Standard Deviation of the time for Gravity Acceleration in Z direction
+"tBodyAccJerkmeanX"	Mean of the time for Body Acceleration Jerk in X direction
+"tBodyAccJerkmeanY"	Mean of the time for Body Acceleration Jerk in Y direction
+"tBodyAccJerkmeanZ"	Mean of the time for Body Acceleration Jerk in Z direction
+"tBodyAccJerkstdX"	Standard Deviation of the time for Body Acceleration Jerk in X direction
+"tBodyAccJerkstdY"	Standard Deviation of the time for Body Acceleration Jerk in Y direction
+"tBodyAccJerkstdZ"	Standard Deviation of the time for Body Acceleration Jerk in Z direction
+"tBodyGyromeanX"	Mean of the time for Body Gyro in X direction
+"tBodyGyromeanY"	Mean of the time for Body Gyro in Y direction
+"tBodyGyromeanZ"	Mean of the time for Body Gyro in Z direction
+"tBodyGyrostdX"		Standard Deviation of the time for Body Gyro in X direction
+"tBodyGyrostdY"		Standard Deviation of the time for Body Gyro in Y direction
+"tBodyGyrostdZ"		Standard Deviation of the time for Body Gyro in Z direction
+"tBodyGyroJerkmeanX"	Mean of the time for Body Gyro Jerk in X direction
+"tBodyGyroJerkmeanY"	Mean of the time for Body Gyro Jerk in Y direction
+"tBodyGyroJerkmeanZ"	Mean of the time for Body Gyro Jerk in Z direction
+"tBodyGyroJerkstdX"	Standard Deviation of the time for Body Gyro Jerk in X direction
+"tBodyGyroJerkstdY"	Standard Deviation of the time for Body Gyro Jerk in y direction
+"tBodyGyroJerkstdZ"	Standard Deviation of the time for Body Gyro Jerk in Z direction
+"tBodyAccMagmean"	Mean of the time for Body Acceleration Magnitude 
+"tBodyAccMagstd"	Standard Deviation of the time for Body Acceleration Magnitude
+"tGravityAccMagmean"	Mean of the time for Gravity Acceleration Magnitude
+"tGravityAccMagstd"	Standard Deviaiton of the time for Gravity Acceleration Magnitude
+"tBodyAccJerkMagmean"	Mean of the time for Body Acceleration Jerk Magnitude
+"tBodyAccJerkMagstd"	Standard Deviation of the time for Body Acceleration Jerk Magnitude
+"tBodyGyroMagmean"	Mean of the time for Body Gyro Magnitude
+"tBodyGyroMagstd"	Standard Deviation of the time for Body Gyro Magnitude
+"tBodyGyroJerkMagmean"	Mean of the time for Body Gyro Jerk Magnitude
+"tBodyGyroJerkMagstd"	Standard Deviation of the time for Body Gyro Jerk Magnitude
+"fBodyAccmeanX"		Mean of the fast Fourier Transform for Body Acceleration in X direction
+"fBodyAccmeanY"		Mean of the fast Fourier Transform for Body Acceleration in Y direction
+"fBodyAccmeanZ"		Mean of the fast Fourier Transform for Body Acceleration in Z direction
+"fBodyAccstdX"		Standard Deviation of the fast Fourier Transform for Body Acceleration in X direction
+"fBodyAccstdY"		Standard Deviation of the fast Fourier Transform for Body Acceleration in Y direction
+"fBodyAccstdZ"		Standard Deviation of the fast Fourier Transform for Body Acceleration in Z direction
+"fBodyAccJerkmeanX"	Mean of the fast Fourier Transform for Body Acceleration Jerk in X direction
+"fBodyAccJerkmeanY"	Mean of the fast Fourier Transform for Body Acceleration Jerk in Y direction
+"fBodyAccJerkmeanZ"	Mean of the fast Fourier Transform for Body Acceleration Jerk in Z direction
+"fBodyAccJerkstdX"	Standard Deviation of the fast Fourier Transform for Body Acceleration Jerk in X direction
+"fBodyAccJerkstdY"	Standard Deviation of the fast Fourier Transform for Body Acceleration Jerk in Y direction
+"fBodyAccJerkstdZ"	Standard Deviation of the fast Fourier Transform for Body Acceleration Jerk in Z direction
+"fBodyGyromeanX"	Mean of the fast Fourier Transform for Body Gyro in X direction
+"fBodyGyromeanY"	Mean of the fast Fourier Transform for Body Gyro in Y direction
+"fBodyGyromeanZ"	Mean of the fast Fourier Transform for Body Gyro in Z direction"
+"fBodyGyrostdX"		Standard Deviation of the fast Fourier Transform for Body Gyro in X direction
+"fBodyGyrostdY"		Standard Deviation of the fast Fourier Transform for Body Gyro in Y direction
+"fBodyGyrostdZ"		Standard Deviation of the fast Fourier Transform for Body Gyro in Z direction
+"fBodyAccMagmean"	 Mean of the fast Fourier Transform for Body Acceleration Magnitude 
+"fBodyAccMagstd"	 Standard Deviation of the fast Fourier Transform for Body Acceleration Magnitude
+"fBodyBodyAccJerkMagmean Mean of the fast Fourier Transform for Body Acceleration Jerk Magnitude 
+"fBodyBodyAccJerkMagstd" Standard Deviation of the fast Fourier Transform for Body Acceleration Jerk Magnitude
+"fBodyBodyGyroMagmean"	 Mean of the fast Fourier Transform for Body Gyro Magnitude
+"fBodyBodyGyroMagstd"	 Standard Deviation of the fast Fourier Transform for Body Gyro Magnitude
+"fBodyBodyGyroJerkMagmea Mean of the fast Fourier Transformfor Body Gyro Jerk Magnitude
+"fBodyBodyGyroJerkMagstd Standard Deviation of the fast Fourier Transform for Body Gyro Jerk Magnitude
+			 
+			 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
+
+
+
+
+
+
